@@ -1,0 +1,37 @@
+module Base
+{
+	model VVA_Vehicles_CarNormal_internals
+	{
+		mesh = vehicles/Vehicles_CarNormal_animated|Vehicles_CarNormal_internals,
+		texture = Vehicles/vehicle_carnormalshell,
+		static = TRUE,
+		scale = 0.004,
+	}
+	model VVA_Vehicles_CarNormal_SeatFL
+	{
+		mesh = vehicles/Vehicles_CarNormal_animated|Seat_FrontLeft_obj,
+		texture = Vehicles/vehicle_carnormalshell,
+		static = TRUE,
+		scale = 0.004,
+	}
+	model VVA_Vehicles_CarNormal_SeatFR
+	{
+		mesh = vehicles/Vehicles_CarNormal_animated|Seat_FrontRight_obj,
+		texture = Vehicles/vehicle_carnormalshell,
+		static = TRUE,
+		scale = 0.004,
+	}
+	model VVA_Vehicles_CarNormal_SeatRL
+	{
+		mesh = vehicles/Vehicles_CarNormal_animated|Seat_RearLeft_obj,
+		texture = Vehicles/vehicle_carnormalshell,
+		static = TRUE,
+		scale = 0.004,
+	}
+	model VVA_Vehicles_CarNormal_SeatRR
+	{
+		mesh = vehicles/Vehicles_CarNormal_animated|Seat_RearRight_obj,
+		texture = Vehicles/vehicle_carnormalshell,
+		static = TRUE,
+		scale = 0.004,
+	

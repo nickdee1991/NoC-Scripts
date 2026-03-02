@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CreditsSoundEvents : MonoBehaviour
+{
+    public AudioSource father;
+
+    public AudioSource mother;
+
+    public AudioSource grandfather;
+
+    public AudioSource creditsText;
+
+    void VoiceFather()
+    {
+        father.Play();
+    }
+    void VoiceMother()
+    {
+        mother.Play();
+    }
+    void VoiceGrandfather()
+    {
+        grandfather.Play();
+    }
+
+    void CreditsText()
+    {
+        creditsText.Play();
+    }
+
+    void ReturnToMenu()
+    {
+        FindObjectOfType<MenuManager>().LoadMenu();
+    }
+}

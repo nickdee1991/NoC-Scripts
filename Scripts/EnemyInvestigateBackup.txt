@@ -1,0 +1,36 @@
+            case InvestigationState.SEARCHAREA:
+
+                if (distanceToTarget < destinationReachedTreshold)
+                {
+                    InvestigateLocationPosition.transform.position = new Vector3(Random.Range(0f, 3f), 0f, 0f);//pick a random point within the radius of the evidence
+                    //move to that point for x seconds
+                    StartCoroutine("InvestigateTimer");  //resume patrol after x seconds
+                }
+                break;
+
+            case InvestigationState.LOOKAROUND:
+
+                if (distanceToTarget < destinationReachedTreshold)
+                {
+                    //rotate head bone around. looking for cause of evidence
+                    //voice prompt
+                    StartCoroutine("InvestigateTimer");  //resume patrol after x seconds
+                }
+                //resume patrol
+                break;
+
+            case InvestigationState.INVESTIGATEEVIDENCE:
+
+                if (distanceToTarget < destinationReachedTreshold)
+                {
+                    //point head bone toward evidence for x seconds 
+                    Debug.Log("investigate evidence");
+                    patrolRandom.agent.isStopped = true;
+                    if (anim.GetBool("isLooking") == false)
+                    {
+                        anim.SetBool("isLooking", true);
+                    }
+                    //voice prompt
+                    StartCoroutine("InvestigateTimer");  //resume patrol after x seconds
+                }
+                break;
